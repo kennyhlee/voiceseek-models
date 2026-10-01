@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VoiceSeek — Privacy Policy</title>
+<meta name="description" content="VoiceSeek is on-device. This page describes what data is (and isn't) collected.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #faf8f4;
+  --text: #1a1612;
+  --text2: #4a423a;
+  --muted: #6b6259;
+  --accent: #e8821a;
+  --accent-dark: #c66d10;
+  --accent-light: #fde8c4;
+  --border: rgba(26,22,18,0.09);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  font-size: 17px;
+}
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 80px 32px 120px;
+}
+nav {
+  padding: 20px 32px;
+  border-bottom: 1px solid var(--border);
+}
+nav a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+nav a:hover { color: var(--accent-dark); }
+h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(48px, 7vw, 72px);
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+  margin-bottom: 12px;
+}
+h1 em { font-style: normal; color: var(--accent); }
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent-light);
+  border: 1px solid rgba(232,130,26,0.25);
+  color: var(--accent-dark);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: 24px;
+}
+.effective {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 32px;
+  letter-spacing: 0.02em;
+  margin-top: 48px;
+  margin-bottom: 16px;
+  color: var(--text);
+}
+h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 28px;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+p { margin-bottom: 16px; color: var(--text2); }
+ul { margin: 0 0 16px 24px; color: var(--text2); }
+li { margin-bottom: 8px; }
+code {
+  font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+  font-size: 14px;
+  background: rgba(232,130,26,0.08);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--accent-dark);
+}
+.tldr {
+  background: var(--accent-light);
+  border-left: 4px solid var(--accent);
+  padding: 20px 24px;
+  border-radius: 4px;
+  margin: 24px 0 32px;
+}
+.tldr strong { color: var(--accent-dark); }
+a { color: var(--accent); }
+a:hover { color: var(--accent-dark); }
+footer {
+  border-top: 1px solid var(--border);
+  padding: 32px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+</style>
+</head>
+<body>
+
+<nav><a href="https://voiceseek.app">← VoiceSeek</a></nav>
+
+<main>
+  <span class="eyebrow">Privacy Policy</span>
+  <h1>Nothing<br>Leaves Your<br><em>Phone</em>.</h1>
+  <p class="effective">Effective: July 20, 2026 <!-- Update if launch date shifts --></p>
+
+  <div class="tldr">
+    <p><strong>Short version:</strong> VoiceSeek collects no data. Every voicemail, transcript, and phone number stays on your device. There is no account, no analytics, no telemetry. This page explains that in more detail.</p>
+  </div>
+
+  <h2>What VoiceSeek processes</h2>
+  <ul>
+    <li>Audio recordings you capture (via microphone) or share (via your Phone app's voicemail share)</li>
+    <li>Transcripts VoiceSeek generates from those recordings, on-device</li>
+    <li>Extracted entities (caller name, phone number, job type, urgency) from those transcripts</li>
+    <li>User-configured settings (retention preferences, pinned voicemails, edited fields)</li>
+  </ul>
+
+  <h2>Where that data lives</h2>
+  <p>Exclusively on your device, in VoiceSeek's private storage:</p>
+  <ul>
+    <li><code>/data/data/app.voiceseek/</code> — settings, models</li>
+    <li><code>/storage/emulated/0/Android/data/app.voiceseek/files/</code> — voicemail audio + transcripts</li>
+  </ul>
+  <p>Uninstalling VoiceSeek removes all of the above.</p>
+
+  <h2>What VoiceSeek sends over the network</h2>
+  <p><strong>Setup only:</strong> the first time you launch VoiceSeek, it downloads the AI models it uses to transcribe voicemails and extract entities. This is a one-time download of a few hundred MB from GitHub (<code>github.com</code> / <code>objects.githubusercontent.com</code>), where VoiceSeek's model files are published as public release assets. After setup, VoiceSeek performs no further network requests.</p>
+  <p>There is no analytics, crash reporting, telemetry, diagnostic data, or any other kind of automated data transmission. Ever.</p>
+
+  <h2>Third-party services</h2>
+  <ul>
+    <li><strong>Model file hosting</strong> via GitHub release assets (<code>github.com</code>). A one-time download at setup. The hosting provider does not receive any of your voicemails, contacts, or settings — VoiceSeek simply fetches static model files, the same way any app downloads a public asset.</li>
+    <li><strong>No advertising SDKs</strong>, <strong>no billing SDK</strong>, <strong>no analytics SDK</strong>. VoiceSeek is free and contains none of these.</li>
+  </ul>
+
+  <h2>Permissions used</h2>
+
+  <h3>Microphone (<code>RECORD_AUDIO</code>)</h3>
+  <p>Required to capture voicemail audio when you tap Start. The microphone is only active during a capture session you initiated.</p>
+
+  <h3>Notifications (<code>POST_NOTIFICATIONS</code>)</h3>
+  <p>Used to show capture progress and completion notifications while VoiceSeek is running in the background.</p>
+
+  <h3>Voicemail access (<code>ADD_VOICEMAIL</code>)</h3>
+  <p>Requested only when you share a voicemail to VoiceSeek from your Phone app. VoiceSeek reads only the specific voicemail file you shared; it does not enumerate or scan your other voicemails. If you deny this permission, VoiceSeek only loses the ability to auto-populate the caller's phone number — the audio is still processed normally.</p>
+
+  <h2>Your rights</h2>
+  <p>Since VoiceSeek collects no data on our servers (there are no servers), there is no data with us to request, correct, or delete. All of your data lives on your device, under your control.</p>
+  <p>To delete everything, uninstall VoiceSeek. This removes all voicemails, transcripts, settings, and downloaded models.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy ever changes, the "Effective" date above will update. Material changes will be announced in the app's release notes on the Play Store.</p>
+
+  <h2>Contact</h2>
+  <p><a href="mailto:support@voiceseek.app">support@voiceseek.app</a></p>
+
+</main>
+
+<footer>
+  © VoiceSeek. Built for tradespeople. All processing on-device.
+</footer>
+
+</body>
+</html>
